@@ -32,9 +32,7 @@ public class Program {
 		System.out.print("Status: ");
 		String status = sc.next().toUpperCase();
 
-		Client client = new Client(clientName, clientEmail, clientBirthDate);
-
-		Order order = new Order(OrderStatus.valueOf(status), client);
+		Order order = new Order(OrderStatus.valueOf(status), new Client(clientName, clientEmail, clientBirthDate));
 		// -------------------------------------------------------------------- >
 		System.out.println("How many items to this order? ");
 		int N = sc.nextInt();
