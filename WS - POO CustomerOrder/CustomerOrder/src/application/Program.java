@@ -46,16 +46,12 @@ public class Program {
 			sc.nextLine(); // após o int
 			System.out.print("Product name: ");
 			String productName = sc.nextLine();
-
 			System.out.print("Product price: ");
 			double productPrice = sc.nextDouble();
-
 			System.out.print("Product quantity: ");
 			int productQuantity = sc.nextInt();
 
-			Product product = new Product(productName, productPrice);
-
-			OrderItem oItem = new OrderItem(productQuantity, productPrice, product);
+			OrderItem oItem = new OrderItem(productQuantity, productPrice, new Product(productName, productPrice));
 
 			order.addItem(oItem);
 
